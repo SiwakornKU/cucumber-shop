@@ -15,3 +15,11 @@ Scenario: Buy multiple products
     When I buy "Bread" with quantity 2
     And I buy "Jam" with quantity 1
     Then total should be 121.00
+
+Scenario Outline: But one product in table
+    When I buy <product> with quantity <quantity>
+    Then total should be <total>
+    Examples:
+        | product | quantity | total  |
+        | "Bread" |   1      | 20.50  |
+        | "Jam"   |   2      | 160.00 |
