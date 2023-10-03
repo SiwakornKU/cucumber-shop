@@ -23,3 +23,5 @@ Scenario Outline: But one product in table
         | product | quantity | total  |
         | "Bread" |   1      | 20.50  |
         | "Jam"   |   2      | 160.00 |
+
+# Siwakorn Pasawang 6410451423
