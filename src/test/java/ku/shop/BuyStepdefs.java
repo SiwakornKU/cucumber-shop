@@ -32,5 +32,15 @@ public class BuyStepdefs {
     public void total_should_be(double total) {
         assertEquals(total, order.getTotal());
     }
-}
 
+//    @When("I paid for {int} pieces of {string}")
+//    public void i_have_paid_for(String name, int quantity){
+//        catalog.getProduct(name).cutStock(quantity);
+//    }
+
+    @Then("in stock of {string} has {int} pieces left")
+    public void in_stock_of_has_pieces_left(String name, int quantity){
+        assertEquals(quantity, catalog.getProduct(name).getStock());
+    }
+}
+// 6410451423 Siwakorn Pasawang
